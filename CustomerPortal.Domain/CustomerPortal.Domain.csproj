@@ -4,11 +4,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="IRepositories\" />
-  </ItemGroup>
+  <!--
+    ARCHITECTURE.md §2: Domain references nothing - no project references, no NuGet packages.
+    Only BCL data annotations are used for mapping.
+  -->
 
 </Project>
